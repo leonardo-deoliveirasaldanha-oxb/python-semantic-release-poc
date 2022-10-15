@@ -1,6 +1,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2022-10-15)
+### Feature
+* Simulate release #1 ([`e8f0165`](https://github.com/leonardo-deoliveirasaldanha-oxb/python-semantic-release-poc/commit/e8f016586d1d583927845f78e0c040ca52a4e792))
+
 ## v0.1.0 (2022-10-15)
 
 
