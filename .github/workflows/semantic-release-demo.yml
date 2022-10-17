@@ -2,9 +2,12 @@ name: Semantic Release Demonstration
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:
+  pull_request:
+    types: [opened, synchronize, reopened]
   push:
     branches:
       - main
+      - update_version_location
 
 jobs:
   lint-check:
@@ -45,6 +48,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install python-semantic-release
       - name: Bump version, update changelog and publish release
+        if: github.event.push == true
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
